@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!--Simbolos especiais que não são mostrados normalmente = &+(x); ex´= &pound; (simbolo monetario Euro)-->
+<!--Relativo é tudo que esta dentro de um container com uma div, e absoluto pode ignorar qualquer regra de formatação-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Glass</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="javascript/funcoes.js"> </script>
+    <link rel="stylesheet" href="./css/specs.css">
+</head>
+
+<body>
+
+    <div id="inter">
+        <header id="head">
+            <hgroup> <!--Grupo de titulos-->
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="oculos" src="./imagens/especificacoes.png" alt="">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1> <!-- ul type = square, disc, circle-->
+                <ul><!-- ol= Numeração normal = 1, Letras = a e A, Romanos i e I-->
+                    <li onmouseover="picChange('imagens/home.png')" onmouseout="picChange('imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+
+                    <li onmouseover="picChange('imagens/especificacoes.png')" onmouseout="picChange('imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+
+                    <li onmouseover="picChange('imagens/fotos.png')" onmouseout="picChange('imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+
+                    <li onmouseover="picChange('imagens/multimidia.png')" onmouseout="picChange('imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+
+                    <li onmouseover="picChange('imagens/contato.png')" onmouseout="picChange('imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+<section id="fullbody">
+    <article id="newswow">
+       <header id="newsheader">
+           <hgroup>
+                <h3>Glass > Especificações</h3>
+                <h1> Raio-X no Google Glass</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="datewow">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
+                <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+                
+                <section id="stuff">
+                    <img src="./imagens/glass-esquema-marcado.jpg" usemap="#mymap">
+                    <map name="mymap">
+                    <area shape="rect" coords="179,202,270,260" href="google-glass.html#screen1" target="windows">
+                    <area shape="circle" coords="158,243,12" href="google-glass.html#camera1" target="windows">
+                    <area shape="circle" coords="73,52,12" href="google-glass.html#battery1" target="windows">
+                    <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#senses1" target="windows">
+                    </map>
+                    <iframe src="google-glass.html" name="windows" id="framespecs"></iframe>
+                </section>
+    </article>
+</section>
+
+       <footer id="feet">
+            <p>Copyright 2013 - by Gustavo Guanabara <br>
+                <a href="https://store.steampowered.com" target="blank">Facebook</a> |
+                <a href="https://twitter.com/wani_wani_0416/status/1752624745349267575/photo/1" target="">Twitter</a>
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

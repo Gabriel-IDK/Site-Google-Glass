@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!--Simbolos especiais que não são mostrados normalmente = &+(x); ex´= &pound; (simbolo monetario Euro)-->
+<!--Relativo é tudo que esta dentro de um container com uma div, e absoluto pode ignorar qualquer regra de formatação-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Glass</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <script src="javascript/funcoes.js"> </script>
+    <script> 
+    function calc_total(){
+        var qtd = parseInt(document.getElementById('idquan').value);
+        tot = qtd * 1500;
+        document.getElementById('idprice').value = tot + ".00";
+    } </script>
+</head>
+
+<body>
+    <div id="inter">
+        <header id="head">
+            <hgroup> <!--Grupo de titulos-->
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="oculos" src="./imagens/contato.png" alt="">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1> <!-- ul type = square, disc, circle-->
+                <ul><!-- ol= Numeração normal = 1, Letras = a e A, Romanos i e I-->
+                    <li onmouseover="picChange('imagens/home.png')"
+                        onmouseout="picChange('imagens/contato.png')"><a href="index.html">Home</a></li>
+
+                    <li onmouseover="picChange('imagens/especificacoes.png')"
+                        onmouseout="picChange('imagens/contato.png')"><a
+                            href="specs.html">Especificações</a></li>
+
+                    <li onmouseover="picChange('imagens/fotos.png')"
+                        onmouseout="picChange('imagens/contato.png')"><a href="fotos.html">Fotos</a>
+                    </li>
+
+                    <li onmouseover="picChange('imagens/multimidia.png')"
+                        onmouseout="picChange('imagens/contato.png')"><a
+                            href="multimidia.html">Multimídia</a></li>
+
+                    <li onmouseover="picChange('imagens/contato.png')"
+                        onmouseout="picChange('imagens/contato.png')"><a href="fale-conosco.html">Fale
+                            conosco</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+<section id="fullbody">
+    <article id="newswow">
+      <header id="newsheader">
+            <hgroup>
+               <h3> Fale Conosco > Contato</h3>
+               <h1> Formulário de Contato</h1>
+               <h2>por Gustavo Guanabara</2>
+               <h3 id="datewow"> Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+      </header>
+
+<form method="post" id="fcontato" action="mailto:santoslopes960@gmail.com.br" oninput="calc_total()" >
+    <fieldset id="user"><!--Fieldset significa, conjunto de campos!-->
+       <legend> Identificação do Usuário</legend>
+
+            <p> <label for="idnome">Nome:</label> <input type="text" name="namenome" id="idnome" size="30" maxlength="60" placeholder="Digite o Seu nome Completo"> </p>
+
+           <p> <label for="idsenha">Senha:</label> <input type="password" name="namesenha" id="idsenha" size="30" maxlength="60" placeholder="Digite sua Senha"> </p>
+
+            <p> <label for="idemail">E-mail:</label> <input type="email" name="nameemail" id="idemail" size="30" maxlength="70" placeholder="Digite seu Email"> </p>
+
+            <fieldset id="sex">
+                <legend>Sexo:</legend> <!--Label com o for, permite o usuário marcar o radio clicando no texto-->
+                 <input type="radio" name="namesex" id="idm"> <label for="idm">Masculino</label><br>
+                 <input type="radio" name="namesex" id="idf"> <label for="idf">Feminino</label><br>
+                 <input type="radio" name="namesex" id="ido"> <label for="ido">Outro</label>
+                 <!--O Label pode ser utilizada para identificar o objeto relativo a ele-->
+
+            </fieldset>
+            <p><label for="iddata">Data de Nascimento:</label> <input type="date" name="namedata" id="iddata"> </p>
+    </fieldset>
+    
+    <fieldset id="adress">
+        <legend>Endereço do Usuário</legend>
+           <p> <label for="idrua">Logradouro:</label> <input type="text" name="namerua" id="idrua" size="30" maxlength="60" placeholder="Digite o nome de sua Rua, Av, Trav, ..."> </p>
+
+           <p><label for="idnumero">Número:</label> <input type="number" name="namenumero" id="idnumero" min="1" max="100000" placeholder="DigiteNumero da casa ou apartamento"> </p>
+
+           <!--É possivel utilizar optgrou para criar um grupo de seleções, podendo separar os estados por região-->
+           <p> <label for="idestado">Estado:</label>
+            <select name="test-estado" id="idestado">
+                <optgroup label="Região Sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+
+                <optgroup label="Região Centro-Oeste">
+                    <option value="MT">Mato Grosso</option>
+                </optgroup>
+
+              <optgroup label="Região Sul">  
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+              </optgroup>
+
+                <optgroup label="Região Nodeste">
+                    <option value="BA">Bahia</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+           </select> </p>
+
+            <p><label for="idcidade">Cidade:</label><input type="text" name="namecidade" id="idcidade" size="30" maxlength="50" placeholder="Digite o nome da sua Cidade" list="datalistcidade"> </p> <datalist id="datalistcidade"> <!--Datalist funciona como um sistema de autocomplemento-->
+                <option value="Itaboraí"></option>
+                <option value="Rio de Janeiro"></option>
+                <option value="Niterói"></option>
+                <option value="Nova Iguaçu"></option>
+                <option value="Belford Roxo"></option>
+            </datalist>
+    </fieldset>
+    
+    <fieldset id="message">
+        <legend>Mensagem do Usuário</legend>
+            <p><label for="idurgencia"> Grau de Urgência:</label> Min<input type="range" name="nameurgencia" id="idurgencia" min="0" max="10" step="1">Max</p>
+
+            <p><label for="idmensagem">Mensagem:</label> <textarea name="namemensagem" id="idmensagem" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea> </p>
+    </fieldset>
+    
+    <fieldset id="purchase">
+       <legend> Quero um Google Glass</legend>
+           <p> <input type="checkbox" name="namecompra" id="idcompra"> <label for="idcompra">Gostaria de adquirir um Google Glass quando disponível</label></p>
+
+           <p><label for="idcolor">Cor:</label><input type="color" name="namecolor" id="idcolor" value="#ffffff"></p>
+
+           <p> <label for="idquan">Quantidade:</label><input type="number" name="namequan" id="idquan" min="0" max="5"></p>
+
+           <p><label for="idprice"> Preço Total: R$</label> <input type="text" name="nameprice" id="idprice" placeholder="Total a pagar:" readonly="true"> </p>
+    </fieldset>
+    
+    <!-- <input type="submit" value="ENVIAR"> -->
+    <input type="image" name="namesend" src="./imagens/botao-enviar.png">
+</form>
+
+    </article>
+</section>
+
+<footer id="feet">
+    <p>Copyright 2013 - by Gustavo Guanabara <br>
+        <a href="https://store.steampowered.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com/wani_wani_0416/status/1752624745349267575/photo/1" target="_blank">Twitter</a>
+    </p>
+</footer>
+
+</div>
+
+</body>
+
+</html>

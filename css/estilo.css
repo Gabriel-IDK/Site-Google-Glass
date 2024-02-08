@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+@font-face {
+    font-family: "logo-font";
+    src: url("../fonts/bubblegum-sans-regular.otf");}
+@font-face {
+    font-family: "comp-font";
+    src: url(../fonts/computer-font.ttf);}
+
+/*Existe o website google fonts para você poder importat para seu projeto*/
+
+body {
+    background-color: #dddddd;
+    color: rgba(0, 0, 0, 1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#inter{
+    width: 900px;
+    background-color: #fff;
+    margin: -20px auto 10px auto;/* ^ > V <*/ /*Comando feito para centralizar a página*/
+    box-shadow: 0px 0px 10px gray; /*Horizontal Vertical Blur color*/
+    padding: 10px; /*Desgrudar o texto da borda*/
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a{
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+header#head img#oculos{
+    position: absolute;
+    left: 890px;
+    top: 70px;
+}
+
+header#head{
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url("../imagens/glass-logo-peq.jpg") no-repeat 0px 90px;
+}
+
+header#head h1{
+    font-family: "logo-font", sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+
+header#head h2{
+    font-family: 'Titillium Web', sans-serif;
+    color: #888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 2px;
+}
+
+figure.foto{
+    position: relative;
+    border: 2px solid #606060;
+    box-shadow: 7px 5px 5px rgb(121, 117, 117);
+}
+
+figure.foto img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/*Efeito de transição  de legenda de imagem*/
+
+figure.foto figcaption{
+    position: absolute;
+    top: 1px;
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+figure.foto:hover figcaption{
+    opacity: 1;
+    transition: ease-in .5s;
+}
+
+/*Formatação do menu*/
+
+/*Hashtags são utilizados para id*/
+
+nav#menu{
+    display: block;
+}
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute; /*Relatica fica presa em um container// Absoluta poder se movimentar para qualquer lugar*/
+    top: -35px;
+    left: 230px;
+}
+nav#menu li{
+    display: inline-block;
+    background-color: #cecece;
+    padding: 5px;
+    margin: 18px;
+    transition: background-color .5s;
+}
+
+nav#menu li:hover{
+    background-color: #606060;
+}
+
+/*Esse código oculta um titulo que pode ser utilizado apenas como ancora*/
+nav#menu h1{
+    display: none;
+}
+
+nav#menu a{
+    color: black;
+    text-decoration: none;/*Remove o underline abaixo do texto*/
+    transition: color .3s;
+}
+
+nav#menu a:hover{
+    color: white;
+}
+
+section#body{
+    display: block; /*ser mostrada como um bloco*/
+    width: 500px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+article#newswow h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10 0px 10px 0px;
+}
+
+header#newsheader h1{
+ font-family: "logo-font", sans-serif;
+ font-size: 20pt;
+ color: #606060;
+ margin-bottom: 0px;
+ margin-top: 0px;
+}
+
+.datewow{
+    text-align: right;
+}
+
+header#newsheader h2{
+    font-size: 15pt;
+    color: #cecece;
+    background-color: white;
+    margin: 0px;
+}
+
+header#newsheader h3{
+    font-size: 12px;
+    color: #606060;
+    
+}
+
+table#gspec{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin: auto;
+}
+table#gspec td{
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+table#gspec td.left{
+    color: white;
+    background-color: #606060;
+    font-weight: bold;
+}
+
+table#gspec td.right{
+    background-color: #cecece;
+}
+
+table#gspec caption{
+    color: #888;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+
+table#gspec caption span{ /*forma de fazer aquele nome pequeno do lado da imagrm "2013"*/
+    display: block;/*Bloco flutuante*/
+    float: right;
+    color: #000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#sideway{
+    display: block;
+    width: 350px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+aside#sideway h1{
+    font-family: "logo-font";
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#sideway h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: white;
+    padding: 5px;
+}
+
+footer#feet{
+    clear:both; /*Faz que tal recurso possa ser mostrada fora da divisão definida*/
+    border-top: 1px solid #606060;
+}
+
+footer#feet p{
+    text-align: center;
+}
+
+footer#feet a{
+    text-align: center;
+}
